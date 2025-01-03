@@ -6,7 +6,7 @@ import java.util.Queue;
 public class Calculator {
     //2. 연산 결과를 저장하는 컬렉션 필드
     //외부에서 접근할 수 없도록 private 접근 제어자 설정.
-    Queue<Integer> saved = new LinkedList<>();
+    private Queue<Integer> saved = new LinkedList<>();
 
     //1. 사칙연산 수행 후, 결과 값을 반환하는 메서드 - static
     public int calculate(int num1, int num2, char operator) {
@@ -30,5 +30,15 @@ public class Calculator {
             System.out.println("몫: " + result + " / 나머지: " + left);
         }
         return result;
+    }
+
+    //Getter 메서드
+    public Queue<Integer> getSaved() {
+        return saved;
+    }
+
+    //Setter 메서드
+    public void setSaved(Integer value) {
+        saved.add(value);
     }
 }

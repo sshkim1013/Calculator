@@ -18,8 +18,8 @@ public class App {
             char operator = sc.next().charAt(0);
 
             int calResult = cal.calculate(num1, num2, operator);
-            cal.saved.add(calResult);   //연산 결과 저장.
-            System.out.println(cal.saved);  //연산 결과 출력.
+            cal.setSaved(calResult);  //연산 결과 저장.
+            System.out.println(cal.getSaved());   //연산 결과 호출.
 
             System.out.print("더 계산하시겠습니까?(exit 입력 시 종료) : ");
             sc.nextLine();
