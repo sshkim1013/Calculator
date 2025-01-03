@@ -56,4 +56,3 @@ public class Calculator {
         return result;
     }
 }
-//2-1) 완
