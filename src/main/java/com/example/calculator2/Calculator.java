@@ -40,5 +40,14 @@ public class Calculator {
     //Setter 메서드
     public void setSaved(Integer value) {
         saved.add(value);
+        deleteSaved();
+    }
+
+    //연산 결과 삭제 메서드
+    //계산 결과가 5개를 넘기면 poll() 수행.
+    public void deleteSaved() {
+        if (saved.size() > 5) {
+            saved.poll();
+        }
     }
 }
