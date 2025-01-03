@@ -13,7 +13,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Queue<Integer> saved = new LinkedList<>();  //연산 결과를 저장하는 컬렉션 필드
+        Queue<Integer> saved = new LinkedList<>();  //2. 연산 결과를 저장하는 컬렉션 필드
 
         while (true) {
             System.out.print("첫 번째 정수를 입력하세요: ");
@@ -32,7 +32,7 @@ public class Calculator {
         }
     }
 
-    //사칙연산 수행 후, 결과 값을 반환하는 메서드 - static
+    //1. 사칙연산 수행 후, 결과 값을 반환하는 메서드 - static
     public static int calculate(int num1, int num2, char operator) {
         int result = 0; //연산 결과 저장.
 
@@ -56,3 +56,4 @@ public class Calculator {
         return result;
     }
 }
+//2-1) 완
