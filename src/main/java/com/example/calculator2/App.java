@@ -17,7 +17,9 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요(+, -, *, /): ");
             char operator = sc.next().charAt(0);
 
-            int result = cal.calculate(num1, num2, operator);
+            int calResult = cal.calculate(num1, num2, operator);
+            cal.saved.add(calResult);   //연산 결과 저장.
+            System.out.println(cal.saved);  //연산 결과 출력.
 
             System.out.print("더 계산하시겠습니까?(exit 입력 시 종료) : ");
             sc.nextLine();
@@ -29,4 +31,3 @@ public class App {
         }
     }
 }
-//2-2 complete
