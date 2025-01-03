@@ -10,7 +10,6 @@ import java.util.Scanner;
 * 2. 연산 결과를 저장하는 컬렉션 타입 필드 제작.
 */
 public class Calculator {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Queue<Integer> saved = new LinkedList<>();  //2. 연산 결과를 저장하는 컬렉션 필드
@@ -23,11 +22,15 @@ public class Calculator {
             System.out.print("피연산자를 입력하세요(+, -, *, /): ");
             char operator = sc.next().charAt(0);
 
-            if (num2 == 0 && operator == '/') {
-                System.out.println("나눗셈 연산에서 분모에 0이 입력될 수 없습니다.");
-            } else {
-                int calResult = calculate(num1, num2, operator);
-                saved.add(calResult);   //연산 결과를 저장.
+            int calResult = calculate(num1, num2, operator);
+            saved.add(calResult);   //연산 결과를 저장.
+
+            System.out.print("더 계산하시겠습니까?(exit 입력 시 종료) : ");
+            sc.nextLine();
+            String answer = sc.nextLine();
+            if (answer.equals("exit")) {
+                System.out.println("계산기 프로그램을 종료합니다.");
+                break;
             }
         }
     }
@@ -45,13 +48,13 @@ public class Calculator {
         } else if (operator == '*') {
             result = num1 * num2;
             System.out.println("곱셈 결과: " + result);
-        } else if (operator == '/') {
+        } else if (operator == '/' && num2 == 0) {
+            System.out.println("나눗셈 연산에서 분모에 0이 입력될 수 없습니다.");
+        } else {
             result = num1 / num2;
             int left = num1 % num2;
             System.out.println("[ 나눗셈 결과 ]");
             System.out.println("몫: " + result + " / 나머지: " + left);
-        } else {
-            System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");
         }
         return result;
     }
