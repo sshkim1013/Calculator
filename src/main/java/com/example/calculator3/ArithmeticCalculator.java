@@ -4,10 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //com.example.calculator2.Calculator Refactoring Ver.
-//제네릭 문법 사용
+//제네릭 문법 사용.
 public class ArithmeticCalculator<T> {
 
-    //제네릭 문법 사용
     private Queue<T> saved = new LinkedList<>();
 
     //연산 메서드

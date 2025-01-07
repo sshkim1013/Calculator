@@ -17,7 +17,6 @@ public enum Operator {
     }
 
     //입력된 기호로 알맞은 Operator 찾는 메서드.
-    //GPT 도움을 받아버렸다...
     public static Operator findSymbol(char symbol) {
         for (Operator op : values()) {
             if (op.symbol == symbol) {

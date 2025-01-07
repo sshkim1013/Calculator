@@ -22,7 +22,7 @@ public class App {
             System.out.println("현재 저장된 연산 결과: " + cal.getSaved());   //연산 결과 호출.
 
             System.out.print("더 계산하시겠습니까?(exit 입력 시 종료) : ");
-            sc.nextLine(); // 버퍼 클리어
+            sc.nextLine(); // 버퍼 클리어.
             String answer = sc.nextLine();
 
             if (answer.equals("exit")) {
